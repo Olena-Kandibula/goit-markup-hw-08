@@ -1,0 +1,15 @@
+// .section {
+//   @include section-padding(94px, 94px);
+// }
+
+.section {
+  @media screen and (min-width: 480px) {
+    @include section-padding(30px, 30px);
+  }
+
+  .section {
+    @media screen and (min-width: 1200px) {
+      @include section-padding(94px, 94px);
+    }
+  }
+}
