@@ -2,16 +2,15 @@
   display: flex;
   flex-direction: column;
   height: 100%;
-  background-color: var(--white-color);
+  background-color: $white-color;
 
   &__field {
     display: block;
     margin-bottom: 10px;
-    font-family: var(--font-family-main);
-    font-size: 12px;
-    line-height: 1.17;
+    font-family: $font-family-main;
+    @include font($fs: 14px, $fw: 400, $lh: 12px);
     letter-spacing: 0.01em;
-    color: var(--brand-text-color);
+    color: $brand-text-color;
 
     &:nth-last-of-type(2) {
       margin-bottom: 20px;
@@ -30,16 +29,15 @@
     padding-left: 42px;
     border: 1px solid rgba(33, 33, 33, 0.2);
     border-radius: 4px;
-    font-family: var(--font-family-main);
-    font-size: 14px;
-    line-height: 1.17;
+    font-family: $font-family-main;
+    @include font($fs: 14px, $fw: 400, $lh: 12px);
     letter-spacing: 0.03em;
-    color: var(--brand-text-color);
+    color: $brand-text-color;
     transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
     &:focus {
       outline: none;
-      border-color: var(--brend-accent-color);
+      border-color: $brand-accent-color;
     }
   }
 
@@ -50,9 +48,8 @@
     margin-top: 4px;
 
     &::placeholder {
-      font-family: var(--font-family-main);
-      font-size: 14px;
-      line-height: 1.14;
+      font-family: $font-family-main;
+      @include font($fs: 14px, $fw: 400, $lh: 16px);
       letter-spacing: 0.01em;
       color: rgba(117, 117, 117, 0.5);
     }
@@ -68,6 +65,9 @@
     display: flex;
     align-items: center;
     margin-bottom: 30px;
+    font-family: $font-family-main;
+    @include font($fs: 12px, $fw: 400, $lh: 14px);
+    color: $brand-text-color;
 
     &::before {
       display: inline-block;
@@ -77,16 +77,16 @@
       margin-right: 8px;
       cursor: pointer;
 
-      background-color: var(--white-color);
-      border: 2px solid var(--brand-title-color);
+      background-color: $white-color;
+      border: 2px solid $brand-title-color;
       border-radius: 2px;
       outline: none;
       transition: background-image 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
       .modal-form__term:checked + & {
-        background-color: var(--brend-accent-color);
+        background-color: $brand-accent-color;
         background-image: url("../images/check-on.svg");
-        border-color: var(--brend-accent-color);
+        border-color: $brand-accent-color;
         background-size: contain;
         outline: none;
       }
@@ -96,7 +96,7 @@
       }
 
       .modal-form__term:focus + & {
-        box-shadow: 0 0 0 2px var(--accent-color);
+        box-shadow: 0 0 0 2px $brand-accent-color;
       }
     }
   }
@@ -105,13 +105,11 @@
 .modal__slogan {
   display: block;
   margin-bottom: 12px;
-  font-family: var(--font-family-main);
-  font-weight: 700;
-  font-size: 20px;
-  line-height: 1.15;
+  font-family: $font-family-main;
+  @include font($fs: 20px, $fw: 700, $lh: 30px);
   text-align: center;
   letter-spacing: 0.03em;
-  color: var(--brand-title-color);
+  color: $brand-title-color;
 }
 
 .modal-form__icon {
@@ -119,25 +117,35 @@
   top: 50%;
   transform: translateY(-50%);
   left: 12px;
-  fill: var(--brand-title-color);
+  fill: $brand-title-color;
   transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  width: 18px;
+  height: 18px;
 
   .modal-form__input:focus + & {
-    fill: var(--brend-accent-color);
+    fill: $brand-accent-color;
   }
 }
 
 .check-desk__link {
   .modal-form__check-desk & {
-    color: var(--brend-accent-color);
+    color: $brand-accent-color;
   }
 }
-
+.check-desk__link {
+  text-decoration: underline;
+}
 .modal-button_send {
   align-self: center;
 }
 
 .modal-form-btn:focus,
 .modal-form-btn:active {
-  background-color: var(--background-color-botton-hover);
+  background-color: $background-color-botton-hover;
+}
+
+@media screen and (min-width: 1200px) {
+  .modal__slogan {
+    @include font($fs: 20px, $fw: 700, $lh: 23px);
+  }
 }

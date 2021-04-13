@@ -1,33 +1,31 @@
 .logo {
   display: inline-block;
-  font-family: $font-family-logo;
-  @include font($fs: 24px, $fw: 700, $lh: 28px);
-  color: $brend-accent-color;
   padding-top: 16px;
   padding-bottom: 16px;
+  font-family: $font-family-logo;
+  @include font($fs: 24px, $fw: 700, $lh: 28px);
+  color: $brand-accent-color;
 
   &__dark-text {
     color: $black-color;
   }
-
-  @media screen and (min-width: 768px) {
-    margin-right: 88px;
-    padding-top: 26px;
-    padding-bottom: 26px;
+  &__light-text {
+    color: $white-color;
   }
 
-  @media screen and (min-width: 1200px) {
-    margin-right: 92px;
-    padding-top: 24px;
-    padding-bottom: 24px;
+  .footer & {
+    padding: 0;
+    margin-bottom: 20px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .logo {
+    margin-right: 88px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .logo {
     @include font($fs: 26px, $fw: 700, $lh: 31px);
-
-    &__light-text {
-      color: $white-color;
-    }
-
-    .footer & {
-      margin-bottom: 20px;
-    }
   }
 }

@@ -1,8 +1,13 @@
 .brand-title {
-  font-weight: 700;
-  font-size: 36px;
-  line-height: 1.17;
+  margin-bottom: 30px;
+  @include font($fs: 28px, $fw: 700, $lh: 33px);
   text-align: center;
-  color: var(--brand-title-color);
-  margin-bottom: 50px;
+  color: $brand-title-color;
+}
+
+@media screen and (min-width: 1200px) {
+  .brand-title {
+    @include font($fs: 36px, $fw: 700, $lh: 42px);
+    margin-bottom: 50px;
+  }
 }

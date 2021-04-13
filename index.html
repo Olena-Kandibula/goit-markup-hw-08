@@ -10,7 +10,13 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.0.0/modern-normalize.css"
       integrity="sha512-Zx6MlUMKSVJoQ+83OwhdILe8cSEsCzfqThJd7J/VA2UrK6Ctj85p+xzqfyuNXE5B1k25uUdmJ2OzItbBy9GHAQ=="
       crossorigin="anonymous"
-    />   
+    /> 
+
+    <!-- <link rel="preconnect" href="https://fonts.gstatic.com">
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Raleway:wght@700&amp;family=Roboto:wght@400;500;700;900&amp;display=swap"
+      rel="stylesheet"> -->
 
     <link
       rel="stylesheet"
@@ -22,6 +28,7 @@
   </head>
 
   <body>
+    <!-- ====================  HEADER  =================== -->
     <header class="header">
       <div class="container">
         
@@ -60,7 +67,7 @@
               href="mailto:info@devstudio.com"
               lang="en"
             >
-              <svg class="contact__icon" width="16" height="12">
+              <svg class="contact__icon mail" >
                 <use href="./images/sprite.svg#envelope"></use>
               </svg>
               info@devstudio.com
@@ -69,7 +76,7 @@
 
           <li class="contact__item">
             <a class="contact__link link" href="tel:+380961111111">
-              <svg class="contact__icon" width="10" height="16">
+              <svg class="contact__icon tel" >
                 <use href="./images/sprite.svg#smartphone"></use>
               </svg>
               +38 096 111 11 11</a
@@ -78,13 +85,13 @@
         </ul>
       </div>
 
-      <!-- =============MOBILE-MENU================== -->
+      <!-- ============= MOBILE-MENU ================== -->
       
       <nav class="mobile-menu" data-menu>
 
         <button  type="button" class="mobile-menu__close-btn" data-menu-close>
-          <svg class="mobile-menu__icon" width="40" height="40">
-            <use href="./images/sprite.svg#mobile-close"></use>
+          <svg class="mobile-menu__icon" >
+            <use  href="./images/sprite.svg#mobile-close"></use>
           </svg>
         </button>
 
@@ -133,11 +140,11 @@
           </li>
         </ul>  
         </nav>      
-      <!-- ============= END MOBILE-MENU================== -->
+      <!-- ============= END MOBILE-MENU ================== -->
     </header>
-
+      <!-- ============= END  HEADER  ==================== -->
     <main>
-     <!-- ======= секция Герой ===== -->
+      <!-- ==================  HERO  ====================== -->
        <section class="hero section">
         <div class="container">
           <h1 class="hero__title">Эффективные решения для вашего бизнеса</h1>
@@ -146,17 +153,17 @@
           </button>
         </div>
       </section>
+      <!-- =============== END  HERO  ===================== -->
 
-      <!--секция Особенности -->
-      <!-- <section class="section features">
+      <!-- ==============  FEATURES  ====================== -->
+      <section class="section features">
         <div class="container">
-          <h2 class="visually-hidden">Наши преимущества</h2> -->
-          <!--будет невидимый-->
+          <h2 class="visually-hidden">Наши преимущества</h2>          
 
-          <!-- <ul class="features__list list">
+          <ul class="features__list list">
             <li class="features__item">
-              <div class="features__icon">
-                <svg width="70" height="70">
+              <div class="features__icon-wrap">
+                <svg class="features__icon">
                   <use href="./images/sprite.svg#antenna"></use>
                 </svg>
               </div>
@@ -168,8 +175,8 @@
             </li>
 
             <li class="features__item">
-              <div class="features__icon">
-                <svg width="70" height="70">
+              <div class="features__icon-wrap">
+                <svg class="features__icon">
                   <use href="./images/sprite.svg#clock"></use>
                 </svg>
               </div>
@@ -181,8 +188,8 @@
             </li>
 
             <li class="features__item">
-              <div class="features__icon">
-                <svg width="70" height="70">
+              <div class="features__icon-wrap">
+                <svg class="features__icon">
                   <use href="./images/sprite.svg#diagram"></use>
                 </svg>
               </div>
@@ -194,8 +201,8 @@
             </li>
 
             <li class="features__item">
-              <div class="features__icon">
-                <svg width="70" height="70">
+              <div class="features__icon-wrap">
+                <svg class="features__icon">
                   <use href="./images/sprite.svg#astronaut"></use>
                 </svg>
               </div>
@@ -207,46 +214,60 @@
             </li>
           </ul>
         </div>
-      </section> -->
-
-      <!--Чем мы занимаемся-->
-      <!-- <section class="section work">
+      </section>
+      <!-- ============ END  FEATURES  ==================== -->
+      <!-- ===============  WORK  ========================= -->
+      <section class="section work">
         <div class="container">
           <h2 class="brand-title">Чем мы занимаемся</h2>
 
           <ul class="work__list list">
             
             <li class="work__item">
-              <img
-                src="./images/what-are-we-doing/tablet.jpg"
-                alt="разработчик пишет код адаптивных сайтов"
-                width="370"
-                height="294"
-              />
+              <picture>                
+                <source srcset="./images/work/img.webp 1x, ./images/work/img@2x.webp 2x" 
+                media="(min-width: 1200px)"  type="image/webp">
+                
+                <source srcset="./images/work/img.jpg 1x, ./images/work/img@2x.jpg 2x"
+                 media="(min-width: 1200px)" type="image/jpeg" >
+
+                <img class="work__img" src="./images/work/img.jpg" alt="разработчик пишет код адаптивных сайтов">
+              </picture>
+           
               <div class="work__label">
                 <p class="work__text">Десктопные приложения</p>
               </div>
             </li>
 
             <li class="work__item">
-              <img
-                src="./images/what-are-we-doing/mobil.jpg"
-                alt="девушка разрабатывает приложение для мобильного телефона"
-                width="370"
-                height="294"
-              />
+              <picture>
+
+                <source srcset="./images/work/img-1.webp 1x, ./images/work/img@2x-1.webp 2x" 
+                media="(min-width: 1200px)"  type="image/webp">
+
+                <source srcset="./images/work/img-1.jpg 1x, ./images/work/img@2x-1.jpg 2x" 
+                media="(min-width: 1200px)" type="image/jpeg" >
+              
+                <img class="work__img" src="./images/work/img-1.jpg" alt="девушка разрабатывает приложение для мобильного телефона">
+              </picture>
+
+            
               <div class="work__label">
                 <p class="work__text">Мобильные приложения</p>
               </div>
             </li>
 
             <li class="work__item">
-              <img
-                src="./images/what-are-we-doing/graphics.jpg"
-                alt="цветовая палитра на планшете"
-                width="370"
-                height="294"
-              />
+              <picture>
+                <source srcset="./images/work/img-2.webp 1x, ./images/work/img@2x-2.webp 2x" 
+                media="(min-width: 1200px)"   type="image/webp">
+
+                <source srcset="./images/work/img-2.jpg 1x, ./images/work/img@2x-2.jpg 2x" 
+                media="(min-width: 1200px)" type="image/jpeg">
+              
+                <img class="work__img" src="./images/work/img-2.jpg" alt="цветовая палитра на планшете">
+              </picture>
+            
 
               <div class="work__label">
                 <p class="work__text">Дизайнерские решения</p>
@@ -254,23 +275,41 @@
             </li>
           </ul>
         </div>
-      </section> -->
-
-      <!--Наша команда-->
-      <!-- <section class="team section">
+      </section>
+      <!-- ==============  END WORK  ====================== -->
+      <!-- ================  TEAM  ======================== -->
+      <section class="team section">
         <div class="container">
           <h2 class="brand-title">Наша команда</h2>
 
           <ul class="team__list list">
 
             <li class="team__item">
-              <img
-                class="team__img"
-                src="./images/team/designer.jpg"
-                alt="на фото улыбаеся дизайнер Игорь Демьяненко"
-                width="270"
-                height="260"
-              />
+
+              <picture class="team__img-wrap">
+                <source srcset="./images/team/desk/team-1200@1-1.webp 1x, ./images/team/desk/team-1200@2-1.webp 2x"
+                   media="(min-width: 1200px)" type="image/webp">
+
+                <source srcset="./images/team/desk/team-1200@1-1.jpg 1x, ./images/team/desk/team-1200@1-1.jpg 2x"
+                  media="(min-width: 1200px)" type="image/jpeg">
+
+
+                <source srcset="./images/team/tablet/team-768@1-1.webp 1x, ./images/team/tablet/team-768@2-1.webp 2x"
+                  media="(min-width: 768px)" type="image/webp">
+
+                <source srcset="./images/team/tablet/team-768@1-1.jpg 1x, ./images/team/tablet/team-768@1-1.jpg 2x"
+                  media="(min-width: 768px)" type="image/jpeg">
+
+                  <source srcset="./images/team/mobile/team-480@1-1.webp 1x, ./images/team/mobile/team-480@2-1.webp 2x"
+                    media="(min-width: 768px)" type="image/webp">
+                  
+                  <source srcset="./images/team/mobile/team-480@1-1.jpg 1x, ./images/team/mobile/team-480@1-1.jpg 2x"
+                    media="(min-width: 768px)" type="image/jpeg">
+                
+                
+                <img class="team__img" src="./images/team/mobile/team-480@1-1.jpg" alt="на фото улыбаеся дизайнер Игорь Демьяненко"> 
+              </picture>
+              
               <div class="team__content-wrapper">
                 <h3 class="team__title">Игорь Демьяненко</h3>
                 <p class="team__skill">Product Designer</p>
@@ -278,15 +317,15 @@
                 <ul class="sociall-list list">
                   <li class="sociall-list__item">
                     <a href="" class="sociall-list__link link">
-                      <svg class="sociall-list__icon" width="20" height="20">
+                      <svg class="sociall-list__icon">
                         <use href="./images/sprite.svg#instagram"></use>
                       </svg>
                     </a>
-                  </li>
+                  </li> 
 
                   <li class="sociall-list__item">
                     <a href="" class="sociall-list__link link">
-                      <svg class="sociall-list__icon" width="20" height="20">
+                      <svg class="sociall-list__icon">
                         <use href="./images/sprite.svg#twitter"></use>
                       </svg>
                     </a>
@@ -294,7 +333,7 @@
 
                   <li class="sociall-list__item">
                     <a href="" class="sociall-list__link link">
-                      <svg class="sociall-list__icon" width="20" height="20">
+                      <svg class="sociall-list__icon">
                         <use href="./images/sprite.svg#facebook"></use>
                       </svg>
                     </a>
@@ -302,26 +341,44 @@
 
                   <li class="sociall-list__item">
                     <a href="" class="sociall-list__link link">
-                      <svg class="sociall-list__icon" width="20" height="20">
+                      <svg class="sociall-list__icon">
                         <use href="./images/sprite.svg#linkedin"></use>
                       </svg>
                     </a>
-                  </li>
-                </ul>
+                  </li> 
+                 </ul> 
               </div>
             </li>
 
             <li class="team__item">
-              <img
-                class="team__img"
-                src="./images/team/developer.jpg"
-                alt="фото разработчика Ольги Репиной"
-                width="270"
-                height="260"
-              />
+              <picture class="team__img-wrap">
+                <source srcset="./images/team/desk/team-1200@1-2.webp 1x, ./images/team/desk/team-1200@2-2.webp 2x"
+                  media="(min-width: 1200px)" type="image/webp">
+              
+                <source srcset="./images/team/desk/team-1200@1-2.jpg 1x, ./images/team/desk/team-1200@1-2.jpg 2x"
+                  media="(min-width: 1200px)" type="image/jpeg">
+              
+              
+                <source srcset="./images/team/tablet/team-768@1-2.webp 1x, ./images/team/tablet/team-768@2-2.webp 2x"
+                  media="(min-width: 768px)" type="image/webp">
+              
+                <source srcset="./images/team/tablet/team-768@1-2.jpg 1x, ./images/team/tablet/team-768@1-2.jpg 2x"
+                  media="(min-width: 768px)" type="image/jpeg">
+              
+                <source srcset="./images/team/mobile/team-480@1-2.webp 1x, ./images/team/mobile/team-480@2-2.webp 2x"
+                  media="(min-width: 768px)" type="image/webp">
+              
+                <source srcset="./images/team/mobile/team-480@1-2.jpg 1x, ./images/team/mobile/team-480@1-2.jpg 2x"
+                  media="(min-width: 768px)" type="image/jpeg">
+              
+              
+                <img class="team__img" src="./images/team/mobile/team-480@1-2.jpg" alt="фото разработчика Ольги Репиной">
+              </picture>
+           
               <div class="team__content-wrapper">
                 <h3 class="team__title">Ольга Репина</h3>
                 <p class="team__skill">Frontend Developer</p>
+
                 <ul class="sociall-list list">
                   <li class="sociall-list__item">
                     <a href="" class="sociall-list__link link">
@@ -359,16 +416,34 @@
             </li>
 
             <li class="team__item">
-              <img
-                class="team__img"
-                src="./images/team/marketolog.jpg"
-                alt="фото маркетолога Николая Тарасова"
-                width="270"
-                height="260"
-              />
+              <picture class="team__img-wrap"             >
+              <source srcset="./images/team/desk/team-1200@1-3.webp 1x, ./images/team/desk/team-1200@2-3.webp 2x"
+                media="(min-width: 1200px)" type="image/webp">
+              
+              <source srcset="./images/team/desk/team-1200@1-3.jpg 1x, ./images/team/desk/team-1200@1-3.jpg 2x"
+                media="(min-width: 1200px)" type="image/jpeg">
+              
+              
+              <source srcset="./images/team/tablet/team-768@1-3.webp 1x, ./images/team/tablet/team-768@2-3.webp 2x"
+                media="(min-width: 768px)" type="image/webp">
+              
+              <source srcset="./images/team/tablet/team-768@1-3.jpg 1x, ./images/team/tablet/team-768@1-3.jpg 2x"
+                media="(min-width: 768px)" type="image/jpeg">
+              
+              <source srcset="./images/team/mobile/team-480@1-3.webp 1x, ./images/team/mobile/team-480@2-3.webp 2x"
+                media="(min-width: 768px)" type="image/webp">
+              
+              <source srcset="./images/team/mobile/team-480@1-3.jpg 1x, ./images/team/mobile/team-480@1-3.jpg 2x"
+                media="(min-width: 768px)" type="image/jpeg">
+              
+              
+              <img class="team__img" src="./images/team/mobile/team-480@1-3.jpg" alt="фото маркетолога Николая Тарасова">
+              </picture>
+              
               <div class="team__content-wrapper">
                 <h3 class="team__title">Николай Тарасов</h3>
                 <p class="team__skill">Marketing</p>
+
                 <ul class="sociall-list list">
                   <li class="sociall-list__item">
                     <a href="" class="sociall-list__link link">
@@ -406,17 +481,37 @@
             </li>
 
             <li class="team__item">
-              <img
-                class="team__img"
-                src="./images/team/ul-designer.jpg"
-                alt="фото дизайнера Михаил Ермаков"
-                width="270"
-                height="260"
-              />
+             <picture class="team__img-wrap">
+              <source srcset="./images/team/desk/team-1200@1-4.webp 1x, ./images/team/desk/team-1200@2-4.webp 2x"
+                media= "(min-width: 1200px)" type="image/webp"/>
+                
+              
+              <source srcset="./images/team/desk/team-1200@1-4.jpg 1x, ./images/team/desk/team-1200@1-4.jpg 2x"
+                media= "(min-width: 1200px)" type="image/jpeg"/>
+              
+              
+              <source srcset="./images/team/tablet/team-768@1-4.webp 1x, ./images/team/tablet/team-768@2-4.webp 2x"
+                media="(min-width: 768px)" type="image/webp"/>
+              
+              <source srcset="./images/team/tablet/team-768@1-4.jpg 1x, ./images/team/tablet/team-768@1-4.jpg 2x"
+                media="(min-width: 768px)" type="image/jpeg"/>
+              
+              <source srcset="./images/team/mobile/team-480@1-4.webp 1x, ./images/team/mobile/team-480@2-4.webp 2x"
+                media="(min-width: 768px)" type="image/webp"/>
+              
+              <source srcset="./images/team/mobile/team-480@1-4.jpg 1x, ./images/team/mobile/team-480@1-4.jpg 2x"
+                media="(min-width: 768px)" type="image/jpeg"/>
+              
+              
+              <img class="team__img" src="./images/team/mobile/team-480@1-4.jpg" alt="фото дизайнера Михаил Ермаков">
+              </picture>
+              
+              
 
               <div class="team__content-wrapper">
                 <h3 class="team__title">Михаил Ермаков</h3>
                 <p class="team__skill">UI Designerr</p>
+
                 <ul class="sociall-list list">
                   <li class="sociall-list__item">
                     <a href="" class="sociall-list__link link">
@@ -451,16 +546,158 @@
             </li>
           </ul>
         </div>
-      </section> -->
+      </section>
+      <!-- ================ END TEAM  ===================== -->
 
-      <!--===============  СLIENTS ========= -->
-      
+      <!--=================  СLIENTS  ===================== -->    
+      <section class="section clients">
+        <div class="container">
+          <h2 class="brand-title">Постоянные клиенты</h2>
+
+          <ul class="clients__list list">
+
+            <li class="clients__item">
+              <a href="" class="clients__link link">
+                <svg class="clients__logo" >
+                  <use href="./images/sprite.svg#logo-klient-1"></use>
+                </svg>
+              </a>
+            </li>
+
+            <li class="clients__item">
+              <a href="" class="clients__link">
+                <svg class="clients__logo" >
+                  <use href="./images/sprite.svg#logo-klient-2"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="clients__item">
+              <a href="" class="clients__link">
+                <svg class="clients__logo" >
+                  <use href="./images/sprite.svg#logo-klient-3"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="clients__item">
+              <a href="" class="clients__link">
+                <svg class="clients__logo" >
+                  <use href="./images/sprite.svg#logo-klient-4"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="clients__item">
+              <a href="" class="clients__link">
+                <svg class="clients__logo" >
+                  <use href="./images/sprite.svg#logo-klient-5"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="clients__item">
+              <a href="" class="clients__link">
+                <svg class="clients__logo" >
+                  <use href="./images/sprite.svg#logo-klient-6"></use>
+                </svg>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </section>
+      <!--=============== END СLIENTS  ===================== -->
     </main>
 
-    
-        <!-- ======= MODAL-FORM =========== -->
+      <!--==================  FOOTER  ===================== -->
+    <footer class="footer">
+      <div class="container">
 
-        <!-- <form action="#" class="modal-form">
+        <div class="footer__address">
+          <a class="logo link" href="./index.html">Web<span class="logo__light-text">Studio</span></a>
+          <address>
+            <ul class="address__list list">
+              <li class="address__item">
+                <a class="address__link link" href="https://goo.gl/maps/Ces3QGSAe3TYxzQn6" rel="noopener noreferrer">г.
+                  Киев, пр-т Леси Украинки, 26
+                </a>
+              </li>
+
+              <li class="address__item">
+                <a class="address__link link" href="mailto:info@devstudio.com" lang="en">info@devstudio.com</a>
+              </li>
+
+              <li class="address__item">
+                <a class="address__link link" href="tel:+380961111111">+38 096 111 11 11</a>
+              </li>
+            </ul>
+          </address>
+        </div>
+
+        <div class="footer__sociall">
+          <b class="footer__call">присоединяйтесь</b>
+          
+          <ul class="sociall-list list">
+            <li class="sociall-list__item">
+              <a href="" class="sociall-list__link link">
+                <svg class="sociall-list__icon" width="20" height="20">
+                  <use href="./images/sprite.svg#instagram"></use>
+                </svg>
+              </a>
+            </li>
+
+            <li class="sociall-list__item">
+              <a href="" class="sociall-list__link link">
+                <svg class="sociall-list__icon" width="20" height="20">
+                  <use href="./images/sprite.svg#twitter"></use>
+                </svg>
+              </a>
+            </li>
+
+            <li class="sociall-list__item">
+              <a href="" class="sociall-list__link link">
+                <svg class="sociall-list__icon" width="20" height="20">
+                  <use href="./images/sprite.svg#facebook"></use>
+                </svg>
+              </a>
+            </li>
+
+            <li class="sociall-list__item">
+              <a href="" class="sociall-list__link link">
+                <svg class="sociall-list__icon" width="20" height="20">
+                  <use href="./images/sprite.svg#linkedin"></use>
+                </svg>
+              </a>
+            </li>
+          </ul>
+        </div> 
+
+        <div class="footer__sub">
+          <b class="footer__call">Подпишитесь на рассылку</b>
+
+          <form action="#" class="sub-form">
+            <input id="sub-e-mail" type="email" name="sub-e-mail" class="sub-form__input" placeholder="E-mail"
+              autocomplete="off" />
+
+            <button type="submit" class="modal-button sub-form__modal-button button">
+              Подписаться
+              <svg class="sub-form__btn-icon" width="24" height="24">
+                <use href="./images/sprite.svg#send"></use>
+              </svg>
+            </button>
+          </form>
+        </div>
+      </div>
+    </footer> 
+      <!--================= END FOOTER ===================== -->
+      <!-- =================== MODAL ======================= -->
+    <div class="backdrop is-hidden" data-modal>
+
+      <div class="modal">
+        <button data-modal-close type="button" class="modal__btn-close animate__zoomIn">
+          <svg class="modal__icon-close" width="18" height="18">
+            <use href="./images/sprite.svg#close"></use>
+          </svg>
+        </button>
+      <!-- ================= MODAL-FORM =================== -->
+
+        <form action="#" class="modal-form">
           <b class="modal__slogan">Оставьте свои данные, мы вам перезвоним</b>
 
           <label class="modal-form__field">
@@ -475,7 +712,7 @@
                 minlength="2"
                 title="First name Last name"
               />
-              <svg class="modal-form__icon" width="18" height="18">
+              <svg class="modal-form__icon" >
                 <use href="./images/sprite.svg#person"></use>
               </svg>
             </span>
@@ -491,7 +728,7 @@
                 autocomplete="off"
                 required
               />
-              <svg class="modal-form__icon" width="18" height="18">
+              <svg class="modal-form__icon" >
                 <use href="./images/sprite.svg#phone"></use>
               </svg>
             </span>
@@ -501,7 +738,7 @@
             Почта
             <span class="modal-form__input-wrapper">
               <input type="email" name="user-mail" class="modal-form__input" autocomplete="off" />
-              <svg class="modal-form__icon" width="18" height="18">
+              <svg class="modal-form__icon" >
                 <use href="./images/sprite.svg#email"></use>
               </svg>
             </span>
@@ -535,9 +772,10 @@
             Отправить
           </button>
         </form>
+      <!-- =========== END MODAL FORM ===================== -->
       </div>
-    </div> -->
-    
+    </div>
+      <!-- =========   === END MODAL ====================== -->
     <script src="./js/modal.js"></script>
     <script src="./js/mobile-menu.js"></script>
 

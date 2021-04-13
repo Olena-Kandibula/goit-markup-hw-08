@@ -6,17 +6,17 @@
 
 @media screen and (min-width: 768px) {
   .header {
-    padding-top: 20px;
-    padding-bottom: 20px;
-  }
-
-  .navigation {
-    margin-right: 84px;
+    padding-top: 0;
+    padding-bottom: 0;
   }
 }
 
-// .navigation {
-//   // display: flex;
-//   align-items: center;
-//   margin-right: 84px;
-// }
+.navigation {
+  margin-right: 84px;
+}
+
+@media screen and (max-width: 767px) {
+  .navigation {
+    display: none;
+  }
+}

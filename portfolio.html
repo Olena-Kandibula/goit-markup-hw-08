@@ -11,39 +11,49 @@
       integrity="sha512-Zx6MlUMKSVJoQ+83OwhdILe8cSEsCzfqThJd7J/VA2UrK6Ctj85p+xzqfyuNXE5B1k25uUdmJ2OzItbBy9GHAQ=="
       crossorigin="anonymous"
     />
-    <!-- <link rel="preconnect" href="https://fonts.gstatic.com" /> -->
-    <!-- <link
+    <link rel="preconnect" href="https://fonts.gstatic.com" /> 
+     <link
       href="https://fonts.googleapis.com/css2?family=Raleway:wght@700&family=Roboto:wght@400;500;700;900&display=swap"
       rel="stylesheet"
-    /> -->
+    />
     <link rel="stylesheet" href="./css/main.min.css" />
   </head>
 
   <body>
+    <!-- =============  HEADER  ================== -->
     <header class="header">
       <div class="container">
-        <nav class="navigation">
-          <a class="logo link" href="./index.html">Web<span class="logo__dark-text">Studio</span></a>
     
+        <a class="logo link" href="./index.html">Web<span class="logo__dark-text">Studio</span></a>
+    
+        <nav class="navigation">
           <ul class="menu list">
+    
             <li class="menu__item">
-              <a class="menu__link link" href="./index.html">Студия</a>
+              <a class="current menu__link link" href="./index.html">Студия</a>
             </li>
     
             <li class="menu__item">
-              <a class="current menu__link link" href="./portfolio.html">Портфолио</a>
+              <a class="menu__link link" href="./portfolio.html">Портфолио</a>
             </li>
     
             <li class="menu__item">
               <a class="menu__link link" href="">Контакты</a>
             </li>
+    
           </ul>
         </nav>
+    
+        <button type="button" class="burger-btn" data-menu-button>
+          <svg class="burger-btn__icon">
+            <use href="./images/sprite.svg#menu_burger"></use>
+          </svg>
+        </button>
     
         <ul class="contact list">
           <li class="contact__item">
             <a class="contact__link link" href="mailto:info@devstudio.com" lang="en">
-              <svg class="contact__icon" width="16" height="12">
+              <svg class="contact__icon mail">
                 <use href="./images/sprite.svg#envelope"></use>
               </svg>
               info@devstudio.com
@@ -52,25 +62,86 @@
     
           <li class="contact__item">
             <a class="contact__link link" href="tel:+380961111111">
-              <svg class="contact__icon" width="10" height="16">
+              <svg class="contact__icon tel">
                 <use href="./images/sprite.svg#smartphone"></use>
               </svg>
               +38 096 111 11 11</a>
           </li>
         </ul>
       </div>
+    
+      <!-- ============= MOBILE-MENU ================ -->
+    
+      <nav class="mobile-menu" data-menu>
+    
+        <button type="button" class="mobile-menu__close-btn" data-menu-close>
+          <svg class="mobile-menu__icon">
+            <use href="./images/sprite.svg#mobile-close"></use>
+          </svg>
+        </button>
+    
+        <ul class="mobile-menu__list list">
+          <li class="mobile-menu__item">
+            <a class="current mobile-menu__link link" href="./index.html">Студия</a>
+          </li>
+    
+          <li class="mobile-menu__item">
+            <a class="mobile-menu__link link" href="./portfolio.html">Портфолио</a>
+          </li>
+    
+          <li class="mobile-menu__item">
+            <a class="mobile-menu__link link" href="">Контакты</a>
+          </li>
+        </ul>
+    
+        <ul class="mobile-contact list">
+    
+          <li class="mobile-contact__item">
+            <a class="mobile-contact__link tel link" href="tel:+380961111111">
+              +38 096 111 11 11</a>
+          </li>
+    
+          <li class="mobile-contact__item">
+            <a class="mobile-contact__link  link" href="mailto:info@devstudio.com" lang="en">
+              info@devstudio.com
+            </a>
+          </li>
+    
+          <li class="mobile-contact__item">
+            <ul class="mobile-social list">
+              <li class="mobile-social__item"><a class="mobile-social__link link" href="">
+                  Instagram</a>
+              </li>
+              <li class="mobile-social__item"><a class="mobile-social__link link" href="">
+                  Twitter</a>
+              </li>
+              <li class="mobile-social__item"><a class="mobile-social__link link" href="">
+                  Facebook</a>
+              </li>
+              <li class="mobile-social__item"><a class="mobile-social__link link" href="">
+                  LinkedIn</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+      <!-- ============= END MOBILE-MENU ============ -->
     </header>
+    <!-- ============= END  HEADER  ============= -->
 
     <main>
       <h1 class="visually-hidden">Наше Портфолио</h1>
-      <!--будет невидимый-->
-
+      
       <section class="portfolio section">
-        <!-- Фильтры -->
+
+    <!-- ============== FILTERS  =============== -->
+
         <div class="container">
+
           <ul class="filter-list list">
-            <li class="filter-list__item">
-              <button class="filter-list__button button" type="button">Все</button>
+
+            <li class="filter-list__item ">
+              <button class="filter-list__button current-filter button" type="button">Все</button>
             </li>
 
             <li class="filter-list__item">
@@ -94,11 +165,14 @@
                 Маркетинг
               </button>
             </li>
-          </ul>
 
-          <!--секция Проекты -->
+          </ul>
+    <!-- =========== END FILTERS  ============== -->
+
+    <!-- ============== PROJECTS  =============== -->
+          
           <h2 class="visually-hidden">Наши Проекты</h2>
-          <!--будет невидимый-->
+          
 
           <ul class="projects list">
 
@@ -107,10 +181,30 @@
               <a class="card link" href="">
                 <div class="card__wrapper">
                   <div class="overlay">
-                    <img
-                      src="./images/portfolio/portfolio1.jpg"
-                      alt="экран ноутбука"
-                    />
+                    <picture >
+
+                      <source srcset="./images/portfolio/projects/desk/1200-9.webp 1x, ./images/portfolio/projects/desk/1200-@2x-9.webp 2x"
+                        media="(min-width: 1200px)" type="image/webp">
+                      
+                      <source srcset="./images/portfolio/projects/desk/1200-9.jpg 1x, ./images/portfolio/projects/desk/1200-@2x-9.jpg 2x"
+                        media="(min-width: 1200px)" type="image/jpeg">                     
+                    
+
+                      <source srcset="./images/portfolio/projects/tablet/768-9.webp 1x, ./images/portfolio/projects/tablet/768-@2x-9.webp 2x"
+                        media="(min-width: 768px)" type="image/webp">
+                      
+                      <source srcset="./images/portfolio/projects/tablet/768-9.jpg 1x, ./images/portfolio/projects/tablet/768-@2x-9.jpg 2x"
+                        media="(min-width: 768px)" type="image/jpeg">
+
+
+                      <source srcset="./images/portfolio/projects/mobile/480-9.webp 1x, ./images/portfolio/projects/mobile/480-@2x-9.webp 2x" 
+                      media="(min-width: 480px)" type="image/webp">
+                    
+                      <source srcset="./images/portfolio/projects/mobile/480-9.jpg 1x, ./images/portfolio/projects/mobile/480-@2x-9.jpg 2x" 
+                      media="(min-width: 480px)" type="image/jpeg">
+                    
+                      <img  src="./images/portfolio/projects/mobile/480-9.jpg" alt="экран ноутбука">
+                    </picture>
 
                     <div class="overlay__description">
                       <p class="overlay__text">
@@ -126,6 +220,7 @@
                     <h3 class="card__title">Технокряк</h3>
                     <p class="card__text">Веб-сайт</p>
                   </div>
+                  
                 </div>
               </a>
             </li>
@@ -134,10 +229,34 @@
               <a class="card link" href="">
                 <div class="card__wrapper">
                   <div class="overlay">
-                    <img
-                      src="./images/portfolio/portfolio2.jpg"
-                      alt="два баскетболиста"
-                    />
+                    <picture>
+                    
+                      <source srcset="./images/portfolio/projects/desk/1200-1.webp 1x, ./images/portfolio/projects/desk/1200-@2x-1.webp 2x"
+                        media="(min-width: 1200px)" type="image/webp">
+                    
+                      <source srcset="./images/portfolio/projects/desk/1200-1.jpg 1x, ./images/portfolio/projects/desk/1200-@2x-1.jpg 2x"
+                        media="(min-width: 1200px)" type="image/jpeg">
+                    
+                    
+                      <source
+                        srcset="./images/portfolio/projects/tablet/768-1.webp 1x,      ./images/portfolio/projects/tablet/768-@2x-1.webp 2x"
+                        media="(min-width: 768px)" type="image/webp">
+                    
+                      <source srcset="./images/portfolio/projects/tablet/768-1.jpg 1x, ./images/portfolio/projects/tablet/768-@2x-1.jpg 2x"
+                        media="(min-width: 768px)" type="image/jpeg">
+                    
+                    
+                      <source
+                        srcset="./images/portfolio/projects/mobile/480-1.webp 1x,      ./images/portfolio/projects/mobile/480-@2x-1.webp 2x"
+                        media="(min-width: 480px)" type="image/webp">
+                    
+                      <source srcset="./images/portfolio/projects/mobile/480-1.jpg 1x, ./images/portfolio/projects/mobile/480-@2x-1.jpg 2x"
+                        media="(min-width: 480px)" type="image/jpeg">
+                    
+                      <img src="./images/portfolio/projects/mobile/480-1.jpg" alt="два баскетболиста">
+                    </picture>
+
+    
 
                     <div class="overlay__description">
                       <p class="overlay__text">
@@ -162,10 +281,33 @@
               <a class="card link" href="">
                 <div class="card__wrapper">
                   <div class="overlay">
-                    <img
-                      src="./images/portfolio/portfolio3.jpg"
-                      alt="логотип ресторана"
-                    />
+                    <picture>
+                    
+                      <source srcset="./images/portfolio/projects/desk/1200-2.webp 1x, ./images/portfolio/projects/desk/1200-@2x-2.webp 2x"
+                        media="(min-width: 1200px)" type="image/webp">
+                    
+                      <source srcset="./images/portfolio/projects/desk/1200-2.jpg 1x, ./images/portfolio/projects/desk/1200-@2x-2.jpg 2x"
+                        media="(min-width: 1200px)" type="image/jpeg">
+                    
+                    
+                      <source
+                        srcset="./images/portfolio/projects/tablet/768-2.webp 1x,      ./images/portfolio/projects/tablet/768-@2x-2.webp 2x"
+                        media="(min-width: 768px)" type="image/webp">
+                    
+                      <source srcset="./images/portfolio/projects/tablet/768-2.jpg 1x, ./images/portfolio/projects/tablet/768-@2x-2.jpg 2x"
+                        media="(min-width: 768px)" type="image/jpeg">
+                    
+                    
+                      <source
+                        srcset="./images/portfolio/projects/mobile/480-2.webp 1x,      ./images/portfolio/projects/mobile/480-@2x-2.webp 2x"
+                        media="(min-width: 480px)" type="image/webp">
+                    
+                      <source srcset="./images/portfolio/projects/mobile/480-2.jpg 1x, ./images/portfolio/projects/mobile/480-@2x-2.jpg 2x"
+                        media="(min-width: 480px)" type="image/jpeg">
+                    
+                      <img src="./images/portfolio/projects/mobile/480-2.jpg" alt="логотип ресторана">
+                    </picture>
+                   
                     <div class="overlay__description">
                       <p class="overlay__text">
                         Технокряк это современная площадка распространения
@@ -190,10 +332,36 @@
               <a class="card link" href="">
                 <div class="card__wrapper">
                   <div class="overlay">
-                    <img
+                    <picture>
+                    
+                      <source srcset="./images/portfolio/projects/desk/1200-3.webp 1x, ./images/portfolio/projects/desk/1200-@2x-3.webp 2x"
+                        media="(min-width: 1200px)" type="image/webp">
+                    
+                      <source srcset="./images/portfolio/projects/desk/1200-3.jpg 1x, ./images/portfolio/projects/desk/1200-@2x-3.jpg 2x"
+                        media="(min-width: 1200px)" type="image/jpeg">
+                    
+                    
+                      <source
+                        srcset="./images/portfolio/projects/tablet/768-3.webp 1x,      ./images/portfolio/projects/tablet/768-@2x-3.webp 2x"
+                        media="(min-width: 768px)" type="image/webp">
+                    
+                      <source srcset="./images/portfolio/projects/tablet/768-3.jpg 1x, ./images/portfolio/projects/tablet/768-@2x-3.jpg 2x"
+                        media="(min-width: 768px)" type="image/jpeg">
+                    
+                    
+                      <source
+                        srcset="./images/portfolio/projects/mobile/480-3.webp 1x,      ./images/portfolio/projects/mobile/480-@2x-3.webp 2x"
+                        media="(min-width: 480px)" type="image/webp">
+                    
+                      <source srcset="./images/portfolio/projects/mobile/480-3.jpg 1x, ./images/portfolio/projects/mobile/480-@2x-3.jpg 2x"
+                        media="(min-width: 480px)" type="image/jpeg">
+                    
+                      <img src="./images/portfolio/projects/mobile/480-3.jpg" alt="наушники">
+                    </picture>
+                    <!-- <img
                       src="./images/portfolio/portfolio4.jpg"
                       alt="наушники"
-                    />
+                    /> -->
                     <div class="overlay__description">
                       <p class="overlay__text">
                         Технокряк это современная площадка распространения
@@ -218,10 +386,36 @@
               <a class="card link" href="">
                 <div class="card__wrapper">
                   <div class="overlay">
-                    <img
+                    <picture>
+                    
+                      <source srcset="./images/portfolio/projects/desk/1200-4.webp 1x, ./images/portfolio/projects/desk/1200-@2x-4.webp 2x"
+                        media="(min-width: 1200px)" type="image/webp">
+                    
+                      <source srcset="./images/portfolio/projects/desk/1200-4.jpg 1x, ./images/portfolio/projects/desk/1200-@2x-4.jpg 2x"
+                        media="(min-width: 1200px)" type="image/jpeg">
+                    
+                    
+                      <source
+                        srcset="./images/portfolio/projects/tablet/768-4.webp 1x,      ./images/portfolio/projects/tablet/768-@2x-4.webp 2x"
+                        media="(min-width: 768px)" type="image/webp">
+                    
+                      <source srcset="./images/portfolio/projects/tablet/768-4.jpg 1x, ./images/portfolio/projects/tablet/768-@2x-4.jpg 2x"
+                        media="(min-width: 768px)" type="image/jpeg">
+                    
+                    
+                      <source
+                        srcset="./images/portfolio/projects/mobile/480-4.webp 1x,      ./images/portfolio/projects/mobile/480-@2x-4.webp 2x"
+                        media="(min-width: 480px)" type="image/webp">
+                    
+                      <source srcset="./images/portfolio/projects/mobile/480-4.jpg 1x, ./images/portfolio/projects/mobile/480-@2x-4.jpg 2x"
+                        media="(min-width: 480px)" type="image/jpeg">
+                    
+                      <img src="./images/portfolio/projects/mobile/480-4.jpg" alt="две коробки">
+                    </picture>
+                    <!-- <img
                       src="./images/portfolio/portfolio5.jpg"
                       alt="две коробки"
-                    />
+                    /> -->
                     <div class="overlay__description">
                       <p class="overlay__text">
                         Технокряк это современная площадка распространения
@@ -246,10 +440,37 @@
               <a class="card link" href="">
                 <div class="card__wrapper">
                   <div class="overlay">
-                    <img
+                    <picture>
+                    
+                      <source srcset="./images/portfolio/projects/desk/1200-5.webp 1x, ./images/portfolio/projects/desk/1200-@2x-5.webp 2x"
+                        media="(min-width: 1200px)" type="image/webp">
+                    
+                      <source srcset="./images/portfolio/projects/desk/1200-5.jpg 1x, ./images/portfolio/projects/desk/1200-@2x-5.jpg 2x"
+                        media="(min-width: 1200px)" type="image/jpeg">
+                    
+                    
+                      <source
+                        srcset="./images/portfolio/projects/tablet/768-5.webp 1x,      ./images/portfolio/projects/tablet/768-@2x-5.webp 2x"
+                        media="(min-width: 768px)" type="image/webp">
+                    
+                      <source srcset="./images/portfolio/projects/tablet/768-5.jpg 1x, ./images/portfolio/projects/tablet/768-@2x-5.jpg 2x"
+                        media="(min-width: 768px)" type="image/jpeg">
+                    
+                    
+                      <source
+                        srcset="./images/portfolio/projects/mobile/480-5.webp 1x,      ./images/portfolio/projects/mobile/480-@2x-5.webp 2x"
+                        media="(min-width: 480px)" type="image/webp">
+                    
+                      <source srcset="./images/portfolio/projects/mobile/480-5.jpg 1x, ./images/portfolio/projects/mobile/480-@2x-5.jpg 2x"
+                        media="(min-width: 480px)" type="image/jpeg">
+                    
+                      <img src="./images/portfolio/projects/mobile/480-5.jpg" alt="изображение на мониторе компьютера">
+                    </picture>
+
+                    <!-- <img
                       src="./images/portfolio/portfolio6.jpg"
                       alt="изображение на мониторе компьютера"
-                    />
+                    /> -->
                     <div class="overlay__description">
                       <p class="overlay__text">
                         Технокряк это современная площадка распространения
@@ -274,10 +495,37 @@
             <a class="card link" href="">
               <div class="card__wrapper">
                 <div class="overlay">
-                    <img
+
+                  <picture>
+                  
+                    <source srcset="./images/portfolio/projects/desk/1200-6.webp 1x, ./images/portfolio/projects/desk/1200-@2x-6.webp 2x"
+                      media="(min-width: 1200px)" type="image/webp">
+                  
+                    <source srcset="./images/portfolio/projects/desk/1200-6.jpg 1x, ./images/portfolio/projects/desk/1200-@2x-6.jpg 2x"
+                      media="(min-width: 1200px)" type="image/jpeg">
+                  
+                  
+                    <source
+                      srcset="./images/portfolio/projects/tablet/768-6.webp 1x,      ./images/portfolio/projects/tablet/768-@2x-6.webp 2x"
+                      media="(min-width: 768px)" type="image/webp">
+                  
+                    <source srcset="./images/portfolio/projects/tablet/768-6.jpg 1x, ./images/portfolio/projects/tablet/768-@2x-6.jpg 2x"
+                      media="(min-width: 768px)" type="image/jpeg">
+                  
+                  
+                    <source
+                      srcset="./images/portfolio/projects/mobile/480-6.webp 1x,      ./images/portfolio/projects/mobile/480-@2x-6.webp 2x"
+                      media="(min-width: 480px)" type="image/webp">
+                  
+                    <source srcset="./images/portfolio/projects/mobile/480-6.jpg 1x, ./images/portfolio/projects/mobile/480-@2x-6.jpg 2x"
+                      media="(min-width: 480px)" type="image/jpeg">
+                  
+                    <img src="./images/portfolio/projects/mobile/480-6.jpg" alt="разворот модного журнала">
+                  </picture>
+                    <!-- <img
                       src="./images/portfolio/portfolio7.jpg"
                       alt="разворот модного журнала"
-                    />
+                    /> -->
                     <div class="overlay__description">
                       <p class="overlay__text">
                         Технокряк это современная площадка распространения
@@ -302,10 +550,36 @@
               <a class="card link" href="">
                 <div class="card__wrapper">
                   <div class="overlay">
-                    <img
+                    <picture>
+                    
+                      <source srcset="./images/portfolio/projects/desk/1200-7.webp 1x, ./images/portfolio/projects/desk/1200-@2x-7.webp 2x"
+                        media="(min-width: 1200px)" type="image/webp">
+                    
+                      <source srcset="./images/portfolio/projects/desk/1200-7.jpg 1x, ./images/portfolio/projects/desk/1200-@2x-7.jpg 2x"
+                        media="(min-width: 1200px)" type="image/jpeg">
+                    
+                    
+                      <source
+                        srcset="./images/portfolio/projects/tablet/768-7.webp 1x,      ./images/portfolio/projects/tablet/768-@2x-7.webp 2x"
+                        media="(min-width: 768px)" type="image/webp">
+                    
+                      <source srcset="./images/portfolio/projects/tablet/768-7.jpg 1x, ./images/portfolio/projects/tablet/768-@2x-7.jpg 2x"
+                        media="(min-width: 768px)" type="image/jpeg">
+                    
+                    
+                      <source
+                        srcset="./images/portfolio/projects/mobile/480-7.webp 1x,      ./images/portfolio/projects/mobile/480-@2x-7.webp 2x"
+                        media="(min-width: 480px)" type="image/webp">
+                    
+                      <source srcset="./images/portfolio/projects/mobile/480-7.jpg 1x, ./images/portfolio/projects/mobile/480-@2x-7.jpg 2x"
+                        media="(min-width: 480px)" type="image/jpeg">
+                    
+                      <img src="./images/portfolio/projects/mobile/480-7.jpg" alt="этикетка">
+                    </picture>
+                    <!-- <img
                       src="./images/portfolio/portfolio8.jpg"
                       alt="этикетка"
-                    />
+                    /> -->
                     <div class="overlay__description">
                       <p class="overlay__text">
                         Технокряк это современная площадка распространения
@@ -329,10 +603,36 @@
               <a class="card link" href="">
                 <div class="card__wrapper">
                   <div class="overlay">
-                    <img
+                    <picture>
+                    
+                      <source srcset="./images/portfolio/projects/desk/1200-8.webp 1x, ./images/portfolio/projects/desk/1200-@2x-8.webp 2x"
+                        media="(min-width: 1200px)" type="image/webp">
+                    
+                      <source srcset="./images/portfolio/projects/desk/1200-8.jpg 1x, ./images/portfolio/projects/desk/1200-@2x-8.jpg 2x"
+                        media="(min-width: 1200px)" type="image/jpeg">
+                    
+                    
+                      <source
+                        srcset="./images/portfolio/projects/tablet/768-8.webp 1x,      ./images/portfolio/projects/tablet/768-@2x-8.webp 2x"
+                        media="(min-width: 768px)" type="image/webp">
+                    
+                      <source srcset="./images/portfolio/projects/tablet/768-8.jpg 1x, ./images/portfolio/projects/tablet/768-@2x-8.jpg 2x"
+                        media="(min-width: 768px)" type="image/jpeg">
+                    
+                    
+                      <source
+                        srcset="./images/portfolio/projects/mobile/480-8.webp 1x,      ./images/portfolio/projects/mobile/480-@2x-8.webp 2x"
+                        media="(min-width: 480px)" type="image/webp">
+                    
+                      <source srcset="./images/portfolio/projects/mobile/480-8.jpg 1x, ./images/portfolio/projects/mobile/480-@2x-8.jpg 2x"
+                        media="(min-width: 480px)" type="image/jpeg">
+                    
+                      <img src="./images/portfolio/projects/mobile/480-8.jpg" alt="ноутбук">
+                    </picture>
+                    <!-- <img
                       src="./images/portfolio/portfolio9.jpg"
                       alt="ноутбук"
-                    />
+                    /> -->
                     <div class="overlay__description">
                       <p class="overlay__text">
                         Технокряк это современная площадка распространения
@@ -352,8 +652,10 @@
           </ul>
         </div>
       </section>
+    <!-- ========== END PROJECTS  =============== -->
     </main>
 
+    <!--=================  FOOTER  ===================== -->
     <footer class="footer">
       <div class="container">
     
@@ -380,6 +682,7 @@
     
         <div class="footer__sociall">
           <b class="footer__call">присоединяйтесь</b>
+    
           <ul class="sociall-list list">
             <li class="sociall-list__item">
               <a href="" class="sociall-list__link link">
@@ -432,5 +735,9 @@
         </div>
       </div>
     </footer>
+    <!--================= END FOOTER ===================== -->
+
+    <script src="./js/mobile-menu.js"></script>
+
   </body>
 </html>
