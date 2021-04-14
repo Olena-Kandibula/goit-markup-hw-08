@@ -334,7 +334,7 @@ address {
     flex-direction: column;
     justify-content: space-between;
     width: 100vw;
-    max-width: 480px;
+    width: 100vw;
     height: 100vh;
     padding: 48px 40px;
     opacity: 0;
@@ -663,8 +663,8 @@ address {
 
 .modal {
   position: absolute;
-  width: 450px;
-  height: 609px;
+  width: 100vw;
+  height: 100vh;
   top: 50%;
   left: 50%;
   padding: 40px;
@@ -714,10 +714,10 @@ address {
   }
 }
 
-@media screen and (max-width: 380px) {
+@media screen and (min-width: 480px) {
   .modal {
-    width: 100vw;
-    height: 100vh;
+    width: 450px;
+    height: 609px;
   }
 }
 
@@ -1100,7 +1100,7 @@ address {
 }
 
 .hero {
-  max-width: 480px;
+  width: 100vw;
   margin: 0 auto;
   background: #c4c4c4;
   background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../images/hero/hero-480@1.jpg");
@@ -1135,7 +1135,6 @@ address {
 
 @media screen and (min-width: 768px) {
   .hero {
-    max-width: 768px;
     background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../images/hero/hero-768@1.jpg");
   }
 }
